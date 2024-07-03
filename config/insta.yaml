@@ -1,0 +1,41 @@
+includes:
+  - headers/data.yaml
+  - headers/device.yaml
+  - headers/misc.yaml
+  - headers/model.yaml
+  - headers/optimizer.yaml
+  - classifiers/Insta_protonet.yaml
+  - backbones/resnet12.yaml
+#具体的参数
+data_root: /home/dyw/LibFewShot/dataset/mini-imagenet
+pretrain_path: /home/dyw/LibFewShot/dataset/mini-imagenet/Res12-pre.pth
+epoch: 300
+workers: 2
+device_ids: 0,1
+n_gpu: 2
+way_num: 5
+shot_num: 1
+query_num: 15
+episode_size: 2
+train_episode: 100
+test_eposode: 100
+
+backbone:
+  name: resnet12_mtl_offcial
+  kwargs:
+    avg_pool: false
+    is_flatten: false
+
+optimizer:
+  name: SGD
+  kwargs: 
+    lr: 0.005
+    nesterov: True
+    weight_decay: 0.0005
+    momentum: 0.9
+
+lr_scheduler: 
+  name: CosineAnnealingLR
+  kwargs:
+    T_max: 200
+    eta_min: 1
