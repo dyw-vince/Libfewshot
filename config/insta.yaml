@@ -21,7 +21,7 @@ train_episode: 100
 test_eposode: 100
 
 backbone:
-  name: resnet12_mtl_offcial
+  name: resnet_12_mtl_offcial
   kwargs:
     avg_pool: false
     is_flatten: false
@@ -39,3 +39,7 @@ lr_scheduler:
   kwargs:
     T_max: 200
     eta_min: 1
+classifier:
+  name: Insta_protonet
+  kwargs: 
+    temperature: 64

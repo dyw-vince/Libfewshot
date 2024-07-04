@@ -1,5 +1,5 @@
 classifier:
-  name: INSTA_ProtoNet
+  name: Insta_protonet
   kwargs: 
     temperature: 64
 #相当于一个分类器

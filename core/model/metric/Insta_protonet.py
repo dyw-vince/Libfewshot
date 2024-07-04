@@ -329,9 +329,9 @@ class INSTA(nn.Module):
 
 
 
-class INSTA_ProtoNet(MetricModel):
+class Insta_ProtoNet(MetricModel):
     def __init__(self,args,**kwargs):
-        super(INSTA_ProtoNet, self).__init__(**kwargs)
+        super(Insta_ProtoNet, self).__init__(**kwargs)
 
 
         self.args = args
