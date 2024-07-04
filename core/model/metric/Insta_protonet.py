@@ -2,16 +2,11 @@ import torch
 import torch.nn as nn
 import numpy as np
 import torch.nn.functional as F
-
-
 from .metric_model import MetricModel
 from core.utils import accuracy
 from .proto_net import ProtoLayer
-
-
 import math
-import torch
-import torch.nn as nn
+
 
 ###########################_______________"FCANET.py"_____________###########################################
 ##############################################################################################################
@@ -332,8 +327,6 @@ class INSTA(nn.Module):
 class Insta_ProtoNet(MetricModel):
     def __init__(self,args,**kwargs):
         super(Insta_ProtoNet, self).__init__(**kwargs)
-
-
         self.args = args
         # from model.models.ddf import DDF
         if args.backbone_class == 'Res12':

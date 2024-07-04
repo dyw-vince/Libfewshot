@@ -39,6 +39,7 @@ lr_scheduler:
   kwargs:
     T_max: 200
     eta_min: 1
+
 classifier:
   name: Insta_protonet
   kwargs: 
